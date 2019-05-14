@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        面向奶酪
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/lin-zy/Picture/master/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #e8d271">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            面向奶酪
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/cheese-oriented">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    <h4 class="post-cat">
+        <a href="/categories/Go语言/">
+            Go语言
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        简明教程: Go 初级篇
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-12
+        </li>
+        <li>
+            面向奶酪
+        </li>
+    </ul>
+    <div class="post-content">
+        <h2 id="编程，从-Hello-World-开始。"><a href="#编程，从-Hello-World-开始。" class="headerlink" title="编程，从 Hello World 开始。"></a>编程，从 Hello World 开始。</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  fmt.Println(<span class="string">"Hello World!"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出结果: Hello World!</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Go-变量之随意变"><a href="#Go-变量之随意变" class="headerlink" title="Go 变量之随意变"></a>Go 变量之随意变</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">var</span> i <span class="keyword">int</span> = <span class="number">30</span>    <span class="comment">// 第一种方式</span></span><br><span class="line">  p := <span class="number">10</span>          <span class="comment">//第二种方式 注意事项 := 只用于初始化操作，相当于声明。</span></span><br><span class="line">  fmt.Println(i,p)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出结果:<span class="number">30</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方式 一</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x,y <span class="keyword">int</span>    <span class="comment">//变量定义  </span></span><br><span class="line">x,y = <span class="number">10</span>,<span class="number">20</span>  <span class="comment">// 赋值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//方式 二</span></span><br><span class="line"></span><br><span class="line">a,b := <span class="string">"apple"</span>,<span class="string">"Banana"</span>    <span class="comment">// 注意  :=  变量声明且初始化 。相同于声明</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fmt.Println(a,b)</span><br><span class="line">fmt.Println(x,y)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出结果:</span><br><span class="line">apple Banana</span><br><span class="line"><span class="number">10</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<h2 id="Go常量之不可变"><a href="#Go常量之不可变" class="headerlink" title="Go常量之不可变"></a>Go常量之不可变</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="comment">//常量定义</span></span><br><span class="line">   <span class="keyword">const</span> Tomato = <span class="string">"Mr.Tomato"</span>           <span class="comment">//隐式类型定义</span></span><br><span class="line">   <span class="keyword">const</span> Potato <span class="keyword">string</span> = <span class="string">"Mr.Potato"</span> <span class="comment">//显示类型定义</span></span><br><span class="line">   fmt.Println(Tomato)</span><br><span class="line">   fmt.Println(Potato)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这里只要大概的了解一下就好。</span></span><br><span class="line">   <span class="keyword">const</span> (    <span class="comment">//常量用作枚举</span></span><br><span class="line">      Watermelon = <span class="string">"西瓜"</span></span><br><span class="line">      Pitaya = <span class="string">"火龙果"</span></span><br><span class="line">      Cherry = <span class="string">"车厘子"</span></span><br><span class="line">   )</span><br><span class="line">   fmt.Println(Watermelon,Pitaya,Cherry)</span><br><span class="line">&#125;</span><br><span class="line">输出结果:</span><br><span class="line">Mr.Tomato</span><br><span class="line">Mr.Potato</span><br><span class="line">西瓜 火龙果 车厘子</span><br></pre></td></tr></table></figure>
+<h2 id="Go-函数定义"><a href="#Go-函数定义" class="headerlink" title="Go 函数定义"></a>Go 函数定义</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> 函数名<span class="params">(参数列表)</span><span class="params">(返回参数列表)</span></span>&#123;</span><br><span class="line">   函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="“返回参数列表”-WTF？？？"><a href="#“返回参数列表”-WTF？？？" class="headerlink" title="“返回参数列表” WTF？？？"></a>“返回参数列表” WTF？？？</h3><p><strong>我举一个栗子！</strong></p>
+<p><strong>go 普通函数的定义(这里没有返回值，没有返回值，没有返回值)</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fruit</span><span class="params">(fruit_name <span class="keyword">string</span>)</span></span>&#123;</span><br><span class="line">  fmt.Println(<span class="string">"Fruit function!!!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>有返回值的写法</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fruit</span><span class="params">(fruit_name <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">  <span class="keyword">return</span> fruit_name</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>返回参数列表取决于你要返回的返回值个数，如果要返回多个返回值的写法</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fruit</span><span class="params">(fruit_name <span class="keyword">string</span>)</span><span class="params">(<span class="keyword">string</span>,<span class="keyword">string</span>)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> fruit_name,<span class="string">"Pitaya"</span>    <span class="comment">//那就加个 Pitaya 吧！！！</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;   </span><br><span class="line">   fmt.Println(fruit(<span class="string">"cherry"</span>))</span><br><span class="line">&#125;</span><br><span class="line">输出结果:</span><br><span class="line">cherry Pitaya</span><br></pre></td></tr></table></figure>
+<p><strong>取单个函数返回值和匿名变量</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">return_one_fruit</span><span class="params">()</span><span class="params">(<span class="keyword">string</span>,<span class="keyword">string</span>)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"Pitaya"</span>,<span class="string">"cherry"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">   <span class="comment">// 我只要cherry，怎么拿?</span></span><br><span class="line">  <span class="comment">//这里就用到匿名变量 "_" 啦！</span></span><br><span class="line">   _,take_cherry := return_one_fruit() </span><br><span class="line">   fmt.Println(take_cherry)</span><br><span class="line">&#125;</span><br><span class="line">输出结果:</span><br><span class="line">cherry</span><br></pre></td></tr></table></figure>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Go语言/">Go语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a></li></ul>
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/">Go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/假想/">假想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/夏季/">夏季</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        面向奶酪
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/lin-zy/Picture/master/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #e8d271">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            面向奶酪
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/cheese-oriented">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    <h4 class="post-cat">
+        <a href="/categories/Go语言/">
+            Go语言
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        简明教程:Go 中级篇
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-13
+        </li>
+        <li>
+            面向奶酪
+        </li>
+    </ul>
+    <div class="post-content">
+        <h1 id="GO-数组、指针、结构体"><a href="#GO-数组、指针、结构体" class="headerlink" title="GO 数组、指针、结构体"></a>GO 数组、指针、结构体</h1><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="comment">// 指定长度的数组</span></span><br><span class="line">  <span class="keyword">var</span> Fruit_set = [<span class="number">3</span>]<span class="keyword">string</span> &#123;<span class="string">"Cherry"</span>,<span class="string">"Banana"</span>,<span class="string">"Apple"</span>&#125;</span><br><span class="line">   <span class="comment">// 不确定长度的数组</span></span><br><span class="line">  <span class="keyword">var</span> Food_set = [...] <span class="keyword">string</span>&#123;<span class="string">"cheese"</span>,<span class="string">"bread"</span>,<span class="string">"egg thrt"</span>,<span class="string">"sandwich"</span>,<span class="string">"salad"</span>&#125;</span><br><span class="line">  <span class="keyword">for</span> _,val :=<span class="keyword">range</span> Fruit_set&#123;</span><br><span class="line">     fmt.Println(val)</span><br><span class="line">  &#125;</span><br><span class="line">  fmt.Println(<span class="string">""</span>)</span><br><span class="line">  <span class="keyword">for</span> _,val :=<span class="keyword">range</span> Food_set&#123;</span><br><span class="line">     fmt.Println(val)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">输出结果:</span><br><span class="line">Cherry</span><br><span class="line">Banana</span><br><span class="line">Apple</span><br><span class="line"></span><br><span class="line">cheese</span><br><span class="line">bread</span><br><span class="line">egg thrt</span><br><span class="line">sandwich</span><br><span class="line">salad</span><br></pre></td></tr></table></figure>
+<h2 id="认识指针地址和指针类型"><a href="#认识指针地址和指针类型" class="headerlink" title="认识指针地址和指针类型"></a>认识指针地址和指针类型</h2><p> 每个变量在运行时都拥有一个地址，这个地址代表变量在内存中的位置。Go 语言中使用&amp;符放在变量前面对变量进行“取地址”操作。</p>
+<p>For example:</p>
+<p>指针就像我们房子的地址，快递员只需要知道包裹上的地址，就能把包裹送达。</p>
+<p>代码示例:</p>
+<a id="more"></a>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">var</span> pack = <span class="string">"Mr.Potato"</span>    <span class="comment">//定义一个变量</span></span><br><span class="line">   fmt.Println(<span class="string">"包裹的主人: "</span>,pack)     </span><br><span class="line">   fmt.Println(<span class="string">"包裹主人的地址: "</span>,&amp;pack) <span class="comment">// &amp; 取地址值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出结果:</span><br><span class="line">包裹的主人:  Mr.Potato</span><br><span class="line">包裹主人的地址:  <span class="number">0xc00004e1c0</span></span><br></pre></td></tr></table></figure>
+<p><strong>声明指针 &amp; 解引用</strong></p>
+<p>注意区分 * 和 &amp; 两个符号。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p *<span class="keyword">string</span> </span><br><span class="line">p = &amp;pack </span><br><span class="line">fmt.Println(<span class="string">"p指针指向pack的地址 "</span>,p)fmt.Println(<span class="string">"p指针指引了pack的值:"</span>,*p)</span><br><span class="line">输出结果:</span><br><span class="line">p指针指向pack的地址  <span class="number">0xc00004e1c0</span></span><br><span class="line">p指针指引了pack的值: Mr.Potato</span><br></pre></td></tr></table></figure>
+<p>注意步骤细节:</p>
+<p>声明一个指针 注意:指针是存储一个变量的地址</p>
+<p>注意:指针是存储一个变量的地址 所以这里要 &amp; 取地址符号</p>
+<p>要获得指针指向地址的值，我们可以使用*运算符 俗称解引用:</p>
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123; <span class="comment">//定义结构体</span></span><br><span class="line">  name <span class="keyword">string</span></span><br><span class="line">  hight <span class="keyword">float32</span></span><br><span class="line">  age <span class="keyword">int</span></span><br><span class="line">  gender <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  .... </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="访问结构体成员"><a href="#访问结构体成员" class="headerlink" title="访问结构体成员"></a>访问结构体成员</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123; <span class="comment">//定义结构体</span></span><br><span class="line">  name <span class="keyword">string</span></span><br><span class="line">  hight <span class="keyword">float32</span></span><br><span class="line">  age <span class="keyword">int</span></span><br><span class="line">  gender <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">   <span class="keyword">var</span> person Person   <span class="comment">//声明为Person 结构体类型</span></span><br><span class="line">person.age = <span class="number">21</span></span><br><span class="line">person.name = <span class="string">"Nl"</span></span><br><span class="line">person.hight = <span class="number">178</span></span><br><span class="line">person.gender = <span class="string">"male"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fmt.Println(<span class="string">"姓名:"</span>,person.name)</span><br><span class="line">fmt.Println(<span class="string">"年龄:"</span>,person.age)</span><br><span class="line">fmt.Println(<span class="string">"身高:"</span>,person.hight)</span><br><span class="line">fmt.Println(<span class="string">"性别:"</span>,person.gender)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出结果:</span><br><span class="line">姓名: Nl</span><br><span class="line">年龄: <span class="number">21</span></span><br><span class="line">身高: <span class="number">175.8</span></span><br><span class="line">性别: male</span><br></pre></td></tr></table></figure>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Go语言/">Go语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a></li></ul>
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/">Go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/假想/">假想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/夏季/">夏季</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

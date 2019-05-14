@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        面向奶酪
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/lin-zy/Picture/master/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@1.0.0/dist/hexo-infinite-scroll.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function () {
+            $('.social-button').click(function () {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #e8d271">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/" class="logo">
+            面向奶酪
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/cheese-oriented">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+    
+    <h4 class="post-cat">
+        <a href="/categories/Go语言/">
+            Go语言
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        简明教程:Go 高级篇
+    </h2>
+    <ul class="post-date">
+        <li>
+            2019-05-13
+        </li>
+        <li>
+            面向奶酪
+        </li>
+    </ul>
+    <div class="post-content">
+        <h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>1、初始化：数组需要指定大小，不指定也会根据初始化的自动推算出大小，不可改变 </p>
+<p>数组： a := […]int{1,2,3}   a := [3]int{1,2,3}</p>
+<p>2、切片不需要指定大小</p>
+<p>切片： a:= []int{1,2,3}  a := make([]int, 5) a := make([]int, 5, 10)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Food :=[]<span class="keyword">string</span>&#123;<span class="string">"bread"</span>,<span class="string">"Salad"</span>,<span class="string">"egg"</span>&#125;</span><br><span class="line">fmt.Printf(<span class="string">"切片操作:%q\n长度:%v\n容量:%v"</span>,Food[:<span class="number">2</span>],<span class="built_in">len</span>(Food),<span class="built_in">cap</span>(Food))</span><br><span class="line">Food = <span class="built_in">append</span>(Food,<span class="string">"Super Banana"</span>)</span><br><span class="line"></span><br><span class="line">输出结果:</span><br><span class="line">切片操作:[<span class="string">"bread"</span> <span class="string">"Salad"</span>]</span><br><span class="line">长度:<span class="number">3</span></span><br><span class="line">容量:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ccm <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span></span><br><span class="line">ccm = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br><span class="line">ccm[<span class="string">"France"</span>] = <span class="string">"Paris"</span></span><br><span class="line">ccm[<span class="string">"Italy"</span>] = <span class="string">"罗马"</span></span><br><span class="line">ccm[<span class="string">"Japan"</span>] = <span class="string">"东京"</span></span><br><span class="line">ccm[<span class="string">"India"</span>] = <span class="string">"新德里"</span></span><br><span class="line"><span class="keyword">for</span> k,v := <span class="keyword">range</span> ccm&#123;</span><br><span class="line">  fmt.Println(k,v)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">delete</span>(ccm,<span class="string">"India"</span>)</span><br><span class="line">fmt.Println(<span class="string">"\n删除Indea之后的map"</span>,ccm)</span><br><span class="line"></span><br><span class="line">输出结果:</span><br><span class="line">France Paris</span><br><span class="line">Italy 罗马</span><br><span class="line">Japan 东京</span><br><span class="line">India 新德里</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">输出结果:</span><br><span class="line">删除Indea之后的<span class="keyword">map</span> <span class="keyword">map</span>[France:Paris Italy:罗马 Japan:东京]</span><br></pre></td></tr></table></figure>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>接⼝是一个或多个方法签名的集合，任何非接口类型只要拥有与之对应的全部方法实现 (包括相同的名称、参数列表以及返回值。)，就表示它”实现” 了该接口，无需显式在该类型上添加接口声明。此种方式又被称作Duck Type。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  People := Student&#123;<span class="string">"Mr.Potato"</span>&#125;</span><br><span class="line">  fmt.Println(People.ReturnName())</span><br><span class="line">  checkInterface(People)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">type</span> People <span class="keyword">interface</span> &#123;</span><br><span class="line">  ReturnName() <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个结构体</span></span><br><span class="line"><span class="keyword">type</span> Student <span class="keyword">struct</span> &#123;</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 定义结构体的一个方法。</span></span><br><span class="line"><span class="comment">// 突然发现这个方法同接口People的所有方法(就一个)//此时可直接认为结构体Student实现了接口Peoplefunc (s Student) ReturnName() string &#123;</span></span><br><span class="line">  <span class="keyword">return</span> s.Name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">checkInterface</span><span class="params">(test <span class="keyword">interface</span>&#123;&#125;)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span> _,ok := test.(People); ok&#123;</span><br><span class="line">     fmt.Println(<span class="string">"No problem!!!"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Go语言/">Go语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a></li></ul>
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/">Go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/假想/">假想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/夏季/">夏季</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>
